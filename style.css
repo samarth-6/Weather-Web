@@ -1,69 +1,86 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none;
-    outline: none;
-    font-family: sans-serif;
 }
 
-body{
-    background-image:url(/assets/weather.jpg);
-    background-size:cover;
-    background-position:center center;
-    background-color: #f0f0f0; 
-    background-attachment :fixed;
+body {
+    background-image: url(/assets/weather.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-color: #f0f0f0;
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgb(62, 149, 193);;
+    background-color: rgb(62, 149, 193);
+    font-family: 'Arial', sans-serif;
+   
 }
 
-.container{
-    width: 400px;
-    height: min-content;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 28px;
-}
-
-.search-box{
+.header {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: fixed;
     width: 100%;
-    height: min-content;
+    top: 0;
+    
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.container {
+    width: 400px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.search-box {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-.search-box input{
-    width: 84%;
-    font-size: 20px;
-    text-transform: capitalize;
-    color: #000;
+.search-box input {
+    width: 100%;
+    font-size: 16px;
+    color: #333;
     background-color: #e6f5fb;
     padding: 12px 16px;
-    border-radius: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .search-box input::placeholder{
     color: #000;
 }
 
-.search-box button{
-    width: 46px;
-    height: 46px;
-    background-color: #e6f5fb;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-}
 
-.search-box button:hover{
+.search-box button {
+    width: 100%;
+    height: 40px;
+    background-color: #3498db;
     color: #fff;
-    background-color: #ababab;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
+.search-box button:hover {
+    background-color: #2575ad;
+}
 .weather-body{
     justify-content: center;
     align-items: center;
